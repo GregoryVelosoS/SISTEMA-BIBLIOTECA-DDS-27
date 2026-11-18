@@ -15,6 +15,9 @@ router.get("/cadastrar", (req,res) => {
     res.render("usuarios/cadastrar");
 })
 
+// MANDAR AS INFORMAÇÕES DE CADASTRO PARA O CONTROLLER
+router.post("/cadastrar", usuarioControllers.criar)
+
 // MOSTRA A PÁGINA DE EDITAR USUÁRIO
 router.get("/editar", (req,res) => {
     res.render("usuarios/editar");
