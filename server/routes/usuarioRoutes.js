@@ -24,13 +24,9 @@ router.get("/editar", (req,res) => {
 })
 
 // MOSTRA A PÁGINA DE LISTAR USUÁRIOS
-router.get("/listar", (req,res) => {
-    res.render("usuarios/listar");
-})
+router.get("/listar", usuarioControllers.listar)
 
-router.get("/", (req, res) =>{
-    res.send("MOSTRANDO A LISTA DE USUÁRIOS");
-})
+router.get("/", usuarioControllers.listar)
 
 // EXPORTAR O ROUTER
 module.exports = router
